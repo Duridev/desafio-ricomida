@@ -1,0 +1,45 @@
+/** Generales */
+body {
+    color: #373A3C;
+    font-family: "Cabin", san-serif;
+}
+
+
+/** Barra de Navegacion */
+
+.navbar{
+    background-color: #373A3C !important;
+    color: white !important;
+}
+
+.navbar-brand{
+    font-family: "lobster", sans-serif;
+}
+
+
+
+/*** Contenido Principal */
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+main .card {
+    max-width: 900px
+}
+
+main .card img {
+    height: 100%;
+    width: 30rem;
+    border-radius: 2px;
+
+}
+
+main button {
+    border: 1px solid #DDDD;
+    height: 2.5rem;
+    width: 9rem;
+    border-radius: 4px;
+}
+
