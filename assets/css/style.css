@@ -70,3 +70,20 @@ main button {
     max-width: 1000px;
   }
 
+/* * Footer */
+
+.seccion-suscripcion{
+  background-color: #DC3545 !important;
+  color: #fff;
+}
+
+footer{
+  background-color: #373A3C;
+  color: #fff;
+}
+
+.titulo {
+  background-color: #373A3C !important;
+  color: white !important;
+  font-family: "lobster", sans-serif;
+}
