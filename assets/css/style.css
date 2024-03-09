@@ -50,6 +50,13 @@ main button {
     background-color: #373A3C;
   }
 
+
+  /**  Carrusel */
+
+.carrusel {
+  max-width: 1000px;
+}
+
   /** Description */
 
   .description {
