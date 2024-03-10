@@ -17,6 +17,10 @@ body {
     font-family: "lobster", sans-serif;
 }
 
+.contenido-navbar {
+  max-width: 1000px;
+}
+
 
 
 /*** Contenido Principal */

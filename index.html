@@ -22,7 +22,7 @@
 <body>
     <!-- barra de navegación -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid contenido-navbar">
             <a class="navbar-brand text-white px-5 fs-2" href="#">Ricomida<img src="" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,9 +53,8 @@
                             CON ESPINACAS Y CHAMPIÑONES
                         </h1>
                         <p class="card-text fw-bold">110 MIN / 6 A 8 PORCIONES</p>
-                        <button class="border-1 bg-light me-2" id="enviarPorCorreo" type="button"
-                            data-bs-toggle="tooltip" data-bs-placement="bottom"
-                            data-bs-title="Presiona para enviar a tu correo">Enviar
+                        <button class="border-1 bg-light me-2" id="enviarCorreo" type="button" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" data-bs-title="Presiona para enviar a tu correo">Enviar
                             correo</button>
                         <button class="border-1 bg-light ms-2" type="button" data-bs-toggle="tooltip"
                             data-bs-placement="right" data-bs-title="Agregar esta receta a tus favoritos">Añadir a
@@ -271,14 +270,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+
+        <!-- Bootstrap Tooltip -->
         <script>
             const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
             const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
         </script>
+
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="./assets/js/jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("#enviarCorreo").click(function () {
+                    alert("El correo fue enviado correctamente...")
+                });
+
+                // Adjuntar el controlador de eventos al hacer doble clic en los títulos
+                $("h3:contains('Ingredientes'), h3:contains('Preparación')").on('dblclick', function () {
+                    // Cambiar el color del texto a rojo
+                    $(this).css({
+                        'color': 'red'
+                    });
+                });
+
+                // Adjuntar controlador de eventos al hacer clic en los títulos de las tarjetas
+                $(".card-title").click(function () {
+                    // Seleccionar el contenido de la tarjeta asociada al título clicado y hacer toggle
+                    $(".card-text").toggle("slow");
+                });
+            });
+
+        </script>
 </body>
 
 </html>
